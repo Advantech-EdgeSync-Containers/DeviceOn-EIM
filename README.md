@@ -1,4 +1,8 @@
 # EdgeMind-Manager Overview
+EdgeMind Manager is a one-stop industrial IoT solution dedicated to addressing remote device management, device monitoring and operation & maintenance, as well as industrial data collection and visualization. The
+management interface is web-based, offering a simple, convenient, and feature-rich experience that is easy to
+integrate. It effectively enhances the management and maintenance efficiency of edge devices in industrial
+environments, significantly reducing operational costs.
 <img width="960" alt="EdgeMind-Manager" src="https://github.com/user-attachments/assets/a9ade67b-bfa7-4028-b705-a3957348d3c2" />
 <img width="960" alt="EdgeMind-Manager-Diagram" src="https://github.com/user-attachments/assets/51685087-d58b-47c7-aa3c-0aacbff9849f" />
 <img width="960" alt="EdgeMind-Manager-Server" src="https://github.com/user-attachments/assets/7228e421-25c2-42f6-8a06-8ec50043915e" />
