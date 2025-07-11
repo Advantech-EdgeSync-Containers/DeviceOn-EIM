@@ -7,6 +7,10 @@ environments, significantly reducing operational costs.
 <img width="960" alt="EdgeMind-Manager-Diagram" src="https://github.com/user-attachments/assets/51685087-d58b-47c7-aa3c-0aacbff9849f" />
 <img width="960" alt="EdgeMind-Manager-Server" src="https://github.com/user-attachments/assets/7228e421-25c2-42f6-8a06-8ec50043915e" />
 
+# Demo
+![EdgeMind-Manager_demo_0](https://github.com/user-attachments/assets/376d376a-c15f-401a-ba78-fb39940e4b4a)
+
+
 # EdgeMind Manager Deployment Guide
 
 ## Supported Environments
