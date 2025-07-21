@@ -9,7 +9,8 @@ environments, significantly reducing operational costs.
 
 
 # Demo
-![EdgeMind-Manager_demo_1](https://github.com/user-attachments/assets/61016cb0-f497-4517-a081-28c43e8b93d4)
+![EdgeMind-Manager_demo_1](https://github.com/user-attachments/assets/6ad47b07-c5ae-449e-8b1c-b8e3fb70b285)
+
 
 
 
