@@ -1,7 +1,7 @@
 version: '3'
 services:
      androidlink: 
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-manager:v3.0.0
+        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-manager:v3.0.1
         restart: always
         depends_on:
                 - mqtt
@@ -37,7 +37,7 @@ services:
         networks: 
                 - advnet
      ithing:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-ithings:v1.6
+        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-ithings:v1.7
         restart: always
         depends_on:
                 - mqtt
