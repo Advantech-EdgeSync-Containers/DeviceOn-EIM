@@ -1,7 +1,7 @@
 version: '3'
 services:
      androidlink: 
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-manager:v3.0.1
+        image: harbor.edgesync.cloud/xian-embedded/eim/manager:v4.0.0
         restart: always
         depends_on:
                 - mqtt
@@ -37,7 +37,7 @@ services:
         networks: 
                 - advnet
      ithing:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-ithings:v1.7
+        image: harbor.edgesync.cloud/xian-embedded/eim/ithings:v4.0.0
         restart: always
         depends_on:
                 - mqtt
@@ -62,7 +62,7 @@ services:
            options:
               max-size: "10k"
      mqtt:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-emqx:v1.2
+        image: harbor.edgesync.cloud/xian-embedded/eim/emqx:v4.0.0
         restart: always
         ports: 
                 - "1883:1883"
@@ -78,7 +78,7 @@ services:
            options:
               max-size: "10k"
      db:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-postgres:v1.2
+        image: harbor.edgesync.cloud/xian-embedded/eim/postgres:v4.0.0
         restart: always
         ports:
                 - "5432:5432"
@@ -102,7 +102,7 @@ services:
            options:
               max-size: "10k"
      novnc:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-novnc:v1.3
+        image: harbor.edgesync.cloud/xian-embedded/eim/novnc:v4.0.0
         restart: always
         volumes:
                 - ./logs/noVnc:/root/adv/log
@@ -122,7 +122,7 @@ services:
            options:
               max-size: "10k"
      minio:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-minio:v1.1
+        image: harbor.edgesync.cloud/xian-embedded/eim/minio:v4.0.0
         restart: always
         ports:
                 - "9000:9000"
@@ -137,7 +137,7 @@ services:
            options:
               max-size: "10k"
      influxDB:
-        image: harbor.edgesync.cloud/xian-embedded/edgemind-manager/apphub-influxdb:v1.2
+        image: harbor.edgesync.cloud/xian-embedded/eim/influxdb:v4.0.0
         restart: always
         ports:
                 - "8086:8086"
