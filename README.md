@@ -1,5 +1,5 @@
-# EdgeMind-Manager Overview
-EdgeMind Manager is a one-stop industrial IoT solution dedicated to addressing remote device management, device monitoring and operation & maintenance, as well as industrial data collection and visualization. The
+# DeviceOn-EIM Overview
+DeviceOn-EIM is a one-stop industrial IoT solution dedicated to addressing remote device management, device monitoring and operation & maintenance, as well as industrial data collection and visualization. The
 management interface is web-based, offering a simple, convenient, and feature-rich experience that is easy to
 integrate. It effectively enhances the management and maintenance efficiency of edge devices in industrial
 environments, significantly reducing operational costs.
@@ -14,7 +14,7 @@ environments, significantly reducing operational costs.
 
 
 
-# EdgeMind Manager Deployment Guide
+# DeviceOn-EIM Deployment Guide
 
 ## Supported Environments
 Deployable to:
@@ -67,7 +67,7 @@ docker-compose version
 ```
 ### 3.2 Deploy EdgeMind-Manager
 ```bash
-git clone https://github.com/Advantech-EdgeSync-Containers/EdgeMind-Manager.git
+git clone https://github.com/Advantech-EdgeSync-Containers/DeviceOn-EIM.git
 cd EdgeMind-Manager   
 chmod +x  start.sh
 # Execute installation (may take 10-20 minutes)
