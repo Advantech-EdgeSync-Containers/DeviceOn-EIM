@@ -3,12 +3,14 @@ DeviceOn-EIM is a one-stop industrial IoT solution dedicated to addressing remot
 management interface is web-based, offering a simple, convenient, and feature-rich experience that is easy to
 integrate. It effectively enhances the management and maintenance efficiency of edge devices in industrial
 environments, significantly reducing operational costs.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b15de991-5d0c-49fa-a19f-4285fd3b5b66" />
-<img width="960" alt="EdgeMind-Manager-Diagram" src="https://github.com/user-attachments/assets/51685087-d58b-47c7-aa3c-0aacbff9849f" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2c21592d-4935-441e-be37-4cc3cd89769b" />
+<img width="1920" height="1080" alt="屏幕截图(93)" src="https://github.com/user-attachments/assets/5446aa78-26b3-4ee4-ac58-75c91baa944f" />
+<img width="1920" height="1080" alt="屏幕截图(91)" src="https://github.com/user-attachments/assets/5dda84b7-0892-4c4a-8cec-bb84bacb4154" />
+<img width="1920" height="1080" alt="屏幕截图(92)" src="https://github.com/user-attachments/assets/68d420e1-cfc0-4253-a396-4e59915c58b3" />
 
 
 # Demo
+
+
 ![EdgeMind-Manager_demo_1](https://github.com/user-attachments/assets/f341e9f9-d9ea-4f3a-bfa6-ea346da658d3)
 
 
