@@ -45,7 +45,7 @@ Deployable to:
 | 1883  | TCP       | MQTT Broker           |
 | 5500  | TCP       | VNC Server            |
 | 9191  | Websocket | VNC                   |
-| 8024,50500-50510  | TCP       | Terminal           |
+| 8024  | TCP       | Terminal              |
 
 ## 3. Installation Procedure
 
@@ -70,7 +70,7 @@ docker-compose version
 ### 3.2 Deploy EdgeMind-Manager
 ```bash
 git clone https://github.com/Advantech-EdgeSync-Containers/DeviceOn-EIM.git
-cd EdgeMind-Manager   
+cd DeviceOn-EIM   
 chmod +x  start.sh
 # Execute installation (may take 10-20 minutes)
 ./start.sh 
