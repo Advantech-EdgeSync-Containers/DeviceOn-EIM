@@ -14,7 +14,6 @@ services:
 
         ports:
                 - "8080:8080"
-                - "8081:8081"
                 - "30001:30001"
         environment:
            TZ: "Asia/Shanghai"
@@ -26,7 +25,7 @@ services:
         logging:
            driver: json-file
            options:
-              max-size: "1m"  # 限制每个日志文件为10MB
+              max-size: "100m"  # 限制每个日志文件为100MB
         dns:
                 - 8.8.8.8
                 - 114.114.114.114
@@ -34,6 +33,11 @@ services:
                 - ./.env
         command: /root/adv/run.sh
         container_name: apphub
+        healthcheck:
+               test: ["CMD-SHELL", "nc -z localhost 8080 && nc -z localhost 30001"]
+               interval: 60s
+               timeout: 30s
+               retries: 3
         networks: 
                 - advnet
      ithing:
@@ -55,12 +59,17 @@ services:
                 - ./.env
         command: /root/adv/run.sh
         container_name: ithing
+        healthcheck:
+              test: ["CMD-SHELL", "nc -z localhost 8082"]
+              interval: 60s
+              timeout: 30s
+              retries: 3
         networks:
                 - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
      mqtt:
         image: harbor.edgesync.cloud/xian-embedded/eim/emqx:v4.0.0
         restart: always
@@ -71,12 +80,18 @@ services:
         env_file:
                 - ./.env
         container_name: m2m_mosquitto
+        healthcheck:
+            test: ["CMD", "/opt/emqx/bin/emqx_ctl", "status"]
+            interval: 60s
+            timeout: 10s
+            retries: 3
+           # start_period: 60s
         networks: 
               - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
      db:
         image: harbor.edgesync.cloud/xian-embedded/eim/postgres:v4.0.0
         restart: always
@@ -95,12 +110,17 @@ services:
         volumes:
                 - ./data/postgresql/data:/var/lib/postgresql/data
         container_name: m2m-postgresSQL
+        healthcheck:
+             test: ["CMD-SHELL", "pg_isready -U postgres"]
+             interval: 60s 
+             timeout: 10s        
+             retries: 3        
         networks: 
               - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
      novnc:
         image: harbor.edgesync.cloud/xian-embedded/eim/novnc:v4.0.0
         restart: always
@@ -114,13 +134,18 @@ services:
                 - "8024:8024"
                 - "1000:8180"
         command: /root/adv/run.sh
+        healthcheck:
+             test:  ["CMD-SHELL", "nc -z localhost 9191 && nc -z localhost 5500 && nc -z localhost 8024"]
+             interval: 60s
+             timeout: 30s
+             retries: 3
         container_name: apphub-nat
         networks: 
                 - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
      minio:
         image: harbor.edgesync.cloud/xian-embedded/eim/minio:v4.0.0
         restart: always
@@ -130,12 +155,17 @@ services:
                 - ./data/minio:/data
         command: /root/adv/run.sh
         container_name: minio
+        healthcheck:
+             test: ["CMD-SHELL", "nc -z localhost 9000"]
+             interval: 60s
+             timeout: 30s
+             retries: 3
         networks:
                 - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
      influxDB:
         image: harbor.edgesync.cloud/xian-embedded/eim/influxdb:v4.0.0
         restart: always
@@ -146,12 +176,17 @@ services:
         env_file:
                 - ./.env
         container_name: m2m-influxdb
+        healthcheck:
+           test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+           interval: 60s
+           timeout: 10s
+           retries: 3
         networks:
                 - advnet
         logging:
            driver: json-file
            options:
-              max-size: "10k"
+              max-size: "10m"
 networks:
     advnet:
         driver: bridge
