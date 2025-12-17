@@ -67,7 +67,7 @@ sudo apt install docker-compose
 docker --version
 docker-compose version
 ```
-### 3.2 Deploy EdgeMind-Manager
+### 3.2 Deploy EIM Server
 ```bash
 git clone https://github.com/Advantech-EdgeSync-Containers/DeviceOn-EIM.git
 cd DeviceOn-EIM   
@@ -80,7 +80,7 @@ chmod +x  start.sh
 >  Configure container networks
 >  Initialize database schemas
 
-## 4. Accessing EdgeMind-Manager
+## 4. Accessing EIM Server
  After successful installation, access the web interface:  
 `http://<SERVER_IP>:8080`  
 
